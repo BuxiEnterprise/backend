@@ -40,7 +40,7 @@ app.use('/files', express.static(path.resolve(__dirname,'..','tmp')));
 
 app.use(require("./routes"));
 
-server.listen(3333);
+server.listen(process.env.PORT || 3333);
 
 
 /* /teste -  cria no carro o nome da pasta que esta a aplicaçao
