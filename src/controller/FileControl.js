@@ -14,6 +14,9 @@ class FileControl{
 
         await box.save();
 
+        //pegar todos usuarios conectado no app naquele box com aquele N id
+        req.io.sockets.in(box._id).emit("file", file);
+
         return res.json(file);
         
     }
